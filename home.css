@@ -1,0 +1,166 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #1a1a2e;
+  color: #eaeaea;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #16213e;
+  padding: 20px 40px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #0f3460;
+}
+
+header h2 {
+  font-size: 24px;
+}
+
+header nav a {
+  color: #eaeaea;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #e94560;
+}
+
+.hero {
+  background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)), 
+    url('https://source.unsplash.com/featured/?skin') no-repeat center center/cover;
+  color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.hero .button {
+  background-color: #e94560;
+  padding: 12px 28px;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.hero .button:hover {
+  background-color: #c72c48;
+}
+
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.feature {
+  background-color: #16213e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+  color: #e94560;
+}
+
+#contact {
+  background-color: #0f3460;
+  padding: 60px 20px;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+#contact h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #1a1a2e;
+  color: #eaeaea;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.contact-form button {
+  background-color: #e94560;
+  color: #ffffff;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #c72c48;
+}
+
+footer {
+  background-color: #16213e;
+  color: #eaeaea;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 2px solid #0f3460;
+}
+
+footer a {
+  color: #e94560;
+  text-decoration: none;
+}

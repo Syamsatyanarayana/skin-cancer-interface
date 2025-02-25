@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Information</title>
+    <link rel="stylesheet" href="patient.css">
+</head>
+<body>
+    <div class="header">Dermal Detection</div>
+    <div class="container">
+        <h2>Patient Information</h2>
+        <form>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" required>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="medicalHistory">Medical History</label>
+                    <textarea id="medicalHistory" rows="3"></textarea>
+                </div>
+                <div class="form-group full-width">
+                    <label>Upload Skin Image</label>
+                    <div class="upload-box">
+                        <input type="file" id="fileUpload" accept="image/png, image/jpeg, image/gif">
+                        <p>Upload a file or drag and drop</p>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn"><a href="index1.html">Proceed to Analysis</a></button>
+        </form>
+    </div>
+</body>
+</html>

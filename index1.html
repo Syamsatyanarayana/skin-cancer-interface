@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skin Cancer Detection</title>
+  <link rel="stylesheet" href="index1.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔍 Skin Cancer Detection</h1>
+    <p class="info">Upload a clear image of the affected skin area to receive an AI-based probability analysis. Early detection can save lives.</p>
+    <div class="upload-section" onclick="document.getElementById('image-input').click()">
+      📂 Click here to upload an image
+      <input type="file" id="image-input" accept="image/*" style="display: none;" onchange="previewImage(event)" />
+      <img id="image-preview" alt="Image Preview" />
+    </div>
+    <button class="button" onclick="detectCancer()">🚀 Detect</button>
+    <div class="result" id="result"></div>
+    <footer>
+      <p>Need help? Contact us at <a href="mailto:support@skinsafe.com">support@skinsafe.com</a></p>
+      <p>&copy; 2025 SkinSafe. All Rights Reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    function previewImage(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function () {
+        const preview = document.getElementById("image-preview");
+        preview.src = reader.result;
+        preview.style.display = "block";
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function detectCancer() {
+      const resultDiv = document.getElementById("result");
+      const imageInput = document.getElementById("image-input");
+
+      if (!imageInput.files.length) {
+        resultDiv.textContent = "⚠️ Please upload an image first.";
+        resultDiv.style.color = "#e94560";
+        return;
+      }
+
+      resultDiv.style.color = "#f1c40f";
+      resultDiv.textContent = "Analyzing... Please wait ⏳";
+
+      setTimeout(() => {
+        const probability = (Math.random() * 100).toFixed(2);
+        resultDiv.style.color = probability > 50 ? "#e74c3c" : "#27ae60";
+        resultDiv.textContent = `Probability of skin cancer: ${probability}%`;
+      }, 2500); // Simulated delay
+    }
+  </script>
+</body>
+</html>
